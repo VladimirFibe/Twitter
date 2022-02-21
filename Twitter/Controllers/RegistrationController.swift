@@ -10,10 +10,15 @@ import UIKit
 class RegistrationController: UIViewController {
   // MARK: - Properties
   
+  
+  private let imagePicker = UIImagePickerController()
+  
   private let plusPhotoButton: UIButton = {
     let button = UIButton(type: .system)
+    let profileImageSize = 128.0
     button.setImage(UIImage(named: "photo"), for: .normal)
     button.tintColor = .white
+    button.setDimensions(width: profileImageSize, height: profileImageSize)
     button.addTarget(self, action: #selector(handleAddPhoto), for: .touchUpInside)
     return button
   }()
@@ -56,7 +61,7 @@ class RegistrationController: UIViewController {
   // MARK: - Selectors
   
   @objc func handleAddPhoto() {
-    print("Add photo")
+    present(imagePicker, animated: true, completion: nil)
   }
   @objc func handleSignUp() {
     print("DEBUG: Sign Up")
@@ -68,15 +73,37 @@ class RegistrationController: UIViewController {
   
   func configureUI() {
     view.backgroundColor = .twitterBlue
+    imagePicker.delegate = self
+    imagePicker.allowsEditing = true
+    
     passwordTextField.isSecureTextEntry = true
-    let stack = UIStackView(arrangedSubviews: [plusPhotoButton, emailContainerView, passwordContainerView, fullnameContainerView, usernameContainerView, signupButton])
+    
+    view.addSubview(plusPhotoButton)
+    plusPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
+    let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, fullnameContainerView, usernameContainerView, signupButton])
     stack.axis = .vertical
     stack.spacing = 20
     let margins = view.layoutMarginsGuide
     view.addSubview(stack)
-    stack.anchor(top: margins.topAnchor, left: margins.leftAnchor, right: margins.rightAnchor)
+    stack.anchor(top: plusPhotoButton.bottomAnchor, left: margins.leftAnchor, right: margins.rightAnchor, paddingTop: 20)
     
     view.addSubview(alreadyHaveAccountButton)
     alreadyHaveAccountButton.anchor(left: margins.leftAnchor, bottom: margins.bottomAnchor, right: margins.rightAnchor)
+  }
+}
+
+// MARK: - UIImagePickerControllerDelegate
+
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    guard let profileImage = info[.editedImage] as? UIImage else { return }
+    plusPhotoButton.layer.cornerRadius = 64
+    plusPhotoButton.layer.masksToBounds = true
+    plusPhotoButton.imageView?.contentMode = .scaleAspectFill
+    plusPhotoButton.imageView?.clipsToBounds = true
+    plusPhotoButton.layer.borderColor = UIColor.white.cgColor
+    plusPhotoButton.layer.borderWidth = 3
+    plusPhotoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
+    dismiss(animated: true, completion: nil)
   }
 }
