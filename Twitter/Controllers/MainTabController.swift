@@ -10,14 +10,42 @@ import UIKit
 class MainTabController: UITabBarController {
   // MARK: - Properties
   
+  let actionButton: UIButton = {
+    let button = UIButton(type: .system)
+    button.tintColor = .white
+    button.backgroundColor = .twitterBlue
+    button.setImage(UIImage(named: "new"), for: .normal)
+    button.layer.cornerRadius = 28.0
+    button.addTarget(self, action: #selector(acitionButtonTapped), for: .touchUpInside)
+    return button
+  }()
+  
   // MARK: - Lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    print(tabBar.frame.size.height)
     configureViewControllers()
+    configureUI()
+  }
+  
+  // MARK: - Selectors
+  
+  @objc func acitionButtonTapped() {
+    print("DEBUG: action")
   }
   
   // MARK: - Helpers
+  
+  func configureUI() {
+    view.addSubview(actionButton)
+    actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                        right: view.rightAnchor,
+                        paddingBottom: 64,
+                        paddingRight: 16,
+                        width: 56,
+                        height: 56)
+  }
   
   func configureViewControllers() {
     let feed = templateNavigationController(systemName: "house",
@@ -28,7 +56,6 @@ class MainTabController: UITabBarController {
                                                      rootViewController: NotificationsController())
     let conversations = templateNavigationController(systemName: "envelope",
                                                      rootViewController: ConversationsController())
-    
     viewControllers = [feed, explore, notifications, conversations]
 
   }
@@ -36,7 +63,6 @@ class MainTabController: UITabBarController {
   func templateNavigationController(systemName: String, rootViewController: UIViewController) -> UINavigationController {
     let controller = UINavigationController(rootViewController: rootViewController)
     controller.tabBarItem.image = UIImage(systemName: systemName)
-    controller.navigationBar.barTintColor = .gray
     controller.navigationItem.title = systemName
     return controller
   }

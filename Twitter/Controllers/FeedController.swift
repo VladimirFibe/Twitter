@@ -21,7 +21,7 @@ class FeedController: UITabBarController {
   
   func configureViewControllers() {
     view.backgroundColor = .white
-    let imageView = UIImageView(image: UIImage(systemName: "applelogo"))
+    let imageView = UIImageView(image: UIImage(named: "TwitterLogoBlue"))
     imageView.contentMode = .scaleAspectFit
     navigationItem.titleView = imageView
   }
