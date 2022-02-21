@@ -26,6 +26,17 @@ class LoginController: UIViewController {
   
   private lazy var passwordContainerView: UIView = Utilities.shared.inputContainerView(systemName: "lock", textField: passwordTextField)
 
+  private let loginButton: UIButton = {
+    let button = Utilities.shared.loginButton("Log In")
+    button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+    return button
+  }()
+  
+  private let dontHaveAccountButton: UIButton = {
+    let button = Utilities.shared.attibutedButton("Don't have an account? ", "Sign Up")
+    button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+    return button
+  }()
   
   // MARK: - Lifecycle
   
@@ -36,6 +47,14 @@ class LoginController: UIViewController {
   
   // MARK: - Selectors
   
+  @objc func handleLogin() {
+    print("Login")
+  }
+  
+  @objc func handleSignUp() {
+    let controller = RegistrationController()
+    navigationController?.pushViewController(controller, animated: true)
+  }
   // MARK: - Helpers
   
   func configureUI() {
@@ -44,14 +63,14 @@ class LoginController: UIViewController {
     navigationController?.navigationBar.barStyle = .black
     navigationController?.navigationBar.isHidden = true
     
-    view.addSubview(logoImageView)
-    logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
-    logoImageView.setDimensions(width: 150, height: 150)
-    
-    let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView])
+    let stack = UIStackView(arrangedSubviews: [logoImageView, emailContainerView, passwordContainerView, loginButton])
     stack.axis = .vertical
-    
+    stack.spacing = 20
+    let margins = view.layoutMarginsGuide
     view.addSubview(stack)
-    stack.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor)
+    stack.anchor(top: margins.topAnchor, left: margins.leftAnchor, right: margins.rightAnchor)
+    
+    view.addSubview(dontHaveAccountButton)
+    dontHaveAccountButton.anchor(left: margins.leftAnchor, bottom: margins.bottomAnchor, right: margins.rightAnchor)
   }
 }
