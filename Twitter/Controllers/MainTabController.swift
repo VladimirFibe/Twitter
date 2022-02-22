@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainTabController: UITabBarController {
   // MARK: - Properties
@@ -24,15 +25,35 @@ class MainTabController: UITabBarController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    print(tabBar.frame.size.height)
-    configureViewControllers()
-    configureUI()
+    authenticateUserAndConfigureUI()
   }
   
+  // MARK: - API
+  
+  func authenticateUserAndConfigureUI() {
+    if Auth.auth().currentUser == nil {
+      DispatchQueue.main.async {
+        let controller = UINavigationController(rootViewController: LoginController())
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
+      }
+    } else {
+      configureViewControllers()
+      configureUI()
+    }
+  }
+  
+  func logout() {
+    do {
+      try Auth.auth().signOut()
+    } catch {
+      print("DEBUG: \(error.localizedDescription)")
+    }
+  }
   // MARK: - Selectors
   
   @objc func acitionButtonTapped() {
-    print("DEBUG: action")
+    logout()
   }
   
   // MARK: - Helpers

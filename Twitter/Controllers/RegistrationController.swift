@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
+import Firebase
+import FirebaseDatabase
 class RegistrationController: UIViewController {
   // MARK: - Properties
   
-  
+  private var profileImage: UIImage?
   private let imagePicker = UIImagePickerController()
   
   private let plusPhotoButton: UIButton = {
@@ -64,7 +65,19 @@ class RegistrationController: UIViewController {
     present(imagePicker, animated: true, completion: nil)
   }
   @objc func handleSignUp() {
-    print("DEBUG: Sign Up")
+    guard let profileImage = profileImage else { return }
+    guard let email = emailTextField.text else { return }
+    guard let password = passwordTextField.text else { return }
+    guard let fullname = fullnameTextField.text else { return }
+    guard let username = usernameTextField.text else { return }
+    guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
+    let credentials = AuthCredentials(email: email, password: password, fullname: fullname, username: username, imageData: imageData)
+    AuthService.shared.registerUser(credentials: credentials) { error, reference in
+      guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow}) else { return }
+      guard let controller = window.rootViewController as? MainTabController else { return }
+      controller.authenticateUserAndConfigureUI()
+      self.dismiss(animated: true, completion: nil)
+    }
   }
   @objc func handleLogin() {
     navigationController?.popViewController(animated: true)
@@ -97,6 +110,7 @@ class RegistrationController: UIViewController {
 extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     guard let profileImage = info[.editedImage] as? UIImage else { return }
+    self.profileImage = profileImage
     plusPhotoButton.layer.cornerRadius = 64
     plusPhotoButton.layer.masksToBounds = true
     plusPhotoButton.imageView?.contentMode = .scaleAspectFill
