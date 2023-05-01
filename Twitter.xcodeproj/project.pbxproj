@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2757718D29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */; };
+		2757719029FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */; };
+		2757719229FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */; };
+		2757719429FFBB8C007EBE57 /* ProfilePhotoSelectorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757719329FFBB8C007EBE57 /* ProfilePhotoSelectorStore.swift */; };
 		27C19E2029FF18B700DD19A5 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */; };
 		27C19E2229FF18EF00DD19A5 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */; };
 		27C19E2429FF199B00DD19A5 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */; };
@@ -21,6 +25,13 @@
 		27C19E3B29FF5B0600DD19A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E3A29FF5B0600DD19A5 /* ProfileViewController.swift */; };
 		27C19E3D29FF5B3500DD19A5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E3C29FF5B3500DD19A5 /* ProfileView.swift */; };
 		27C19E4029FF646C00DD19A5 /* SignInStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E3F29FF646C00DD19A5 /* SignInStore.swift */; };
+		27C19E4229FF770300DD19A5 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E4129FF770300DD19A5 /* ContainerViewController.swift */; };
+		27C19E4529FF810C00DD19A5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E4429FF810C00DD19A5 /* MenuViewController.swift */; };
+		27C19E4729FF918500DD19A5 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E4629FF918500DD19A5 /* SideMenuView.swift */; };
+		27C19E4929FF921F00DD19A5 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E4829FF921E00DD19A5 /* SideMenuViewModel.swift */; };
+		27C19E4B29FF923F00DD19A5 /* UserStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E4A29FF923F00DD19A5 /* UserStatsView.swift */; };
+		27C19E4D29FF929900DD19A5 /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E4C29FF929900DD19A5 /* SideMenuRowView.swift */; };
+		27C19E5029FF930C00DD19A5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E4F29FF930C00DD19A5 /* Person.swift */; };
 		27D915D929FEB4820027C3BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D915D829FEB4820027C3BF /* AppDelegate.swift */; };
 		27D915DB29FEB4820027C3BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D915DA29FEB4820027C3BF /* SceneDelegate.swift */; };
 		27D915E229FEB4820027C3BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D915E129FEB4820027C3BF /* Assets.xcassets */; };
@@ -49,6 +60,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
+		2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorViewController.swift; sourceTree = "<group>"; };
+		2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorViewModel.swift; sourceTree = "<group>"; };
+		2757719329FFBB8C007EBE57 /* ProfilePhotoSelectorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorStore.swift; sourceTree = "<group>"; };
 		27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
@@ -63,6 +78,13 @@
 		27C19E3A29FF5B0600DD19A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		27C19E3C29FF5B3500DD19A5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		27C19E3F29FF646C00DD19A5 /* SignInStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInStore.swift; sourceTree = "<group>"; };
+		27C19E4129FF770300DD19A5 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		27C19E4429FF810C00DD19A5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		27C19E4629FF918500DD19A5 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		27C19E4829FF921E00DD19A5 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		27C19E4A29FF923F00DD19A5 /* UserStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsView.swift; sourceTree = "<group>"; };
+		27C19E4C29FF929900DD19A5 /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
+		27C19E4F29FF930C00DD19A5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		27D915D529FEB4820027C3BF /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D915D829FEB4820027C3BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D915DA29FEB4820027C3BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +125,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2757718E29FFAE3C007EBE57 /* PhotSelector */ = {
+			isa = PBXGroup;
+			children = (
+				2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */,
+				2757719329FFBB8C007EBE57 /* ProfilePhotoSelectorStore.swift */,
+				2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */,
+				2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */,
+			);
+			name = PhotSelector;
+			sourceTree = "<group>";
+		};
 		27C19E1E29FF16DE00DD19A5 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +164,7 @@
 				27C19E2F29FF372100DD19A5 /* TabBarCoordinator.swift */,
 				27C19E3129FF3CA200DD19A5 /* TabItem.swift */,
 				27C19E3329FF580100DD19A5 /* TabBarController.swift */,
+				27C19E4129FF770300DD19A5 /* ContainerViewController.swift */,
 			);
 			name = TabBar;
 			sourceTree = "<group>";
@@ -153,6 +187,25 @@
 			name = ProfileView;
 			sourceTree = "<group>";
 		};
+		27C19E4329FF80DD00DD19A5 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				27C19E4429FF810C00DD19A5 /* MenuViewController.swift */,
+				27C19E4629FF918500DD19A5 /* SideMenuView.swift */,
+				27C19E4829FF921E00DD19A5 /* SideMenuViewModel.swift */,
+				27C19E4C29FF929900DD19A5 /* SideMenuRowView.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		27C19E4E29FF92FF00DD19A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27C19E4F29FF930C00DD19A5 /* Person.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		27D915CC29FEB4820027C3BF = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +225,7 @@
 		27D915D729FEB4820027C3BF /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				27C19E4E29FF92FF00DD19A5 /* Model */,
 				27D915F929FEBA2D0027C3BF /* Core */,
 				27D915F829FEB5A20027C3BF /* App */,
 				27D9160B29FEBFDC0027C3BF /* Features */,
@@ -234,6 +288,7 @@
 		27D9160B29FEBFDC0027C3BF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				27C19E4329FF80DD00DD19A5 /* Menu */,
 				27C19E3529FF5A7400DD19A5 /* Profile */,
 				27C19E2E29FF370400DD19A5 /* TabBar */,
 				27D9161B29FEC4790027C3BF /* Components */,
@@ -248,6 +303,7 @@
 				27D9160D29FEC0070027C3BF /* AuthCoordinator.swift */,
 				27C19E2729FF1B4800DD19A5 /* SignUp */,
 				27C19E1E29FF16DE00DD19A5 /* SignIn */,
+				2757718E29FFAE3C007EBE57 /* PhotSelector */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -277,6 +333,7 @@
 				27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */,
 				27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */,
 				27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */,
+				27C19E4A29FF923F00DD19A5 /* UserStatsView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -366,7 +423,11 @@
 				27C19E4029FF646C00DD19A5 /* SignInStore.swift in Sources */,
 				27D9162129FEC5070027C3BF /* SingInViewModel.swift in Sources */,
 				27D915D929FEB4820027C3BF /* AppDelegate.swift in Sources */,
+				27C19E4929FF921F00DD19A5 /* SideMenuViewModel.swift in Sources */,
 				27D915DB29FEB4820027C3BF /* SceneDelegate.swift in Sources */,
+				2757719429FFBB8C007EBE57 /* ProfilePhotoSelectorStore.swift in Sources */,
+				27C19E4529FF810C00DD19A5 /* MenuViewController.swift in Sources */,
+				2757719029FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift in Sources */,
 				27C19E3429FF580100DD19A5 /* TabBarController.swift in Sources */,
 				27C19E3029FF372100DD19A5 /* TabBarCoordinator.swift in Sources */,
 				27D9160429FEBD1A0027C3BF /* Router.swift in Sources */,
@@ -375,11 +436,15 @@
 				27C19E3729FF5A9300DD19A5 /* ProfileCoordinator.swift in Sources */,
 				27C19E2B29FF1BD900DD19A5 /* SignUpView.swift in Sources */,
 				27D9160A29FEBE1E0027C3BF /* AppCoordinator.swift in Sources */,
+				27C19E5029FF930C00DD19A5 /* Person.swift in Sources */,
 				27D9161529FEC1EA0027C3BF /* RestrictedUIHostingController.swift in Sources */,
 				27C19E3B29FF5B0600DD19A5 /* ProfileViewController.swift in Sources */,
+				2757719229FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift in Sources */,
+				27C19E4D29FF929900DD19A5 /* SideMenuRowView.swift in Sources */,
 				27D9160829FEBD8A0027C3BF /* BaseCoordinator.swift in Sources */,
 				27D9161829FEC24E0027C3BF /* UIViewController+Extension.swift in Sources */,
 				27D9161A29FEC29C0027C3BF /* UIView+Extension.swift in Sources */,
+				27C19E4729FF918500DD19A5 /* SideMenuView.swift in Sources */,
 				27D915FD29FEBAC90027C3BF /* BaseViewController.swift in Sources */,
 				27D9161D29FEC4850027C3BF /* CustomInputField.swift in Sources */,
 				27D9161329FEC1940027C3BF /* View+Extension.swift in Sources */,
@@ -387,13 +452,16 @@
 				27C19E2D29FF23C900DD19A5 /* SignUpStore.swift in Sources */,
 				27C19E2229FF18EF00DD19A5 /* RoundedShape.swift in Sources */,
 				27C19E3D29FF5B3500DD19A5 /* ProfileView.swift in Sources */,
+				2757718D29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift in Sources */,
 				27C19E2629FF1B4000DD19A5 /* SignUpViewController.swift in Sources */,
 				27D9160E29FEC0070027C3BF /* AuthCoordinator.swift in Sources */,
+				27C19E4229FF770300DD19A5 /* ContainerViewController.swift in Sources */,
 				27D9161029FEC11E0027C3BF /* SignInViewController.swift in Sources */,
 				27C19E2429FF199B00DD19A5 /* PrimaryButtonView.swift in Sources */,
 				27D9161F29FEC4CB0027C3BF /* SignInView.swift in Sources */,
 				27C19E2929FF1BCD00DD19A5 /* SignUpViewModel.swift in Sources */,
 				27D915FF29FEBB200027C3BF /* Store.swift in Sources */,
+				27C19E4B29FF923F00DD19A5 /* UserStatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
