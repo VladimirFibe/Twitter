@@ -1,21 +1,22 @@
 import SwiftUI
 
-struct SignInNavigation {
-    let signupHandler: Callback
-    let signInHadler: Callback
+struct SignUpNavigation {
+    let selectPhoto: Callback
 }
 
-final class SignInViewController: BaseViewController {
-    private var navigation: SignInNavigation
-    private lazy var viewModel = SingInViewModel(signup: navigation.signupHandler) { email, password in
-        self.store.actions.send(.signInWith(email, password))
-    }
-    private let store = SignInStore()
+final class SignUpViewController: BaseViewController {
+    private let store = SignUpStore()
+    private lazy var viewModel = SignUpViewModel(signup: {email, password, fullname, username in
+        self.store.actions.send(.signUpWith(email, password, fullname, username))
+    }, signin: {
+        self.navigationController?.popViewController(animated: true)
+    })
+    private let navigation: SignUpNavigation
     private lazy var rootView: BridgedView = {
-        SignInView(viewModel: viewModel).bridge()
+        SignUpView(viewModel: viewModel).bridge()
     }()
     
-    init(navigation: SignInNavigation) {
+    init(navigation: SignUpNavigation) {
         self.navigation = navigation
         super.init(nibName: nil, bundle: nil)
     }
@@ -31,14 +32,14 @@ final class SignInViewController: BaseViewController {
             .sink { [weak self] event in
                 guard let self = self else { return }
                 switch event {
-                case .login:
-                    self.navigation.signInHadler()
+                case .selectPhoto:
+                    self.navigation.selectPhoto()
                 }
             }.store(in: &bag)
     }
 }
 
-extension SignInViewController {
+extension SignUpViewController {
     override func setupViews() {
         super.setupViews()
         addIgnoringSafeArea(rootView)

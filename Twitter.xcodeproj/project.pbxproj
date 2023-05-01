@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27C19E2029FF18B700DD19A5 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */; };
+		27C19E2229FF18EF00DD19A5 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */; };
+		27C19E2429FF199B00DD19A5 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */; };
+		27C19E2629FF1B4000DD19A5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2529FF1B4000DD19A5 /* SignUpViewController.swift */; };
+		27C19E2929FF1BCD00DD19A5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2829FF1BCD00DD19A5 /* SignUpViewModel.swift */; };
+		27C19E2B29FF1BD900DD19A5 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2A29FF1BD900DD19A5 /* SignUpView.swift */; };
+		27C19E2D29FF23C900DD19A5 /* SignUpStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2C29FF23C900DD19A5 /* SignUpStore.swift */; };
+		27C19E3029FF372100DD19A5 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2F29FF372100DD19A5 /* TabBarCoordinator.swift */; };
+		27C19E3229FF3CA200DD19A5 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E3129FF3CA200DD19A5 /* TabItem.swift */; };
+		27C19E3429FF580100DD19A5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E3329FF580100DD19A5 /* TabBarController.swift */; };
+		27C19E3729FF5A9300DD19A5 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E3629FF5A9300DD19A5 /* ProfileCoordinator.swift */; };
+		27C19E3B29FF5B0600DD19A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E3A29FF5B0600DD19A5 /* ProfileViewController.swift */; };
+		27C19E3D29FF5B3500DD19A5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E3C29FF5B3500DD19A5 /* ProfileView.swift */; };
+		27C19E4029FF646C00DD19A5 /* SignInStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E3F29FF646C00DD19A5 /* SignInStore.swift */; };
 		27D915D929FEB4820027C3BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D915D829FEB4820027C3BF /* AppDelegate.swift */; };
 		27D915DB29FEB4820027C3BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D915DA29FEB4820027C3BF /* SceneDelegate.swift */; };
 		27D915E229FEB4820027C3BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D915E129FEB4820027C3BF /* Assets.xcassets */; };
@@ -35,6 +49,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
+		27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
+		27C19E2529FF1B4000DD19A5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		27C19E2829FF1BCD00DD19A5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		27C19E2A29FF1BD900DD19A5 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		27C19E2C29FF23C900DD19A5 /* SignUpStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStore.swift; sourceTree = "<group>"; };
+		27C19E2F29FF372100DD19A5 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		27C19E3129FF3CA200DD19A5 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		27C19E3329FF580100DD19A5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		27C19E3629FF5A9300DD19A5 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		27C19E3A29FF5B0600DD19A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		27C19E3C29FF5B3500DD19A5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		27C19E3F29FF646C00DD19A5 /* SignInStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInStore.swift; sourceTree = "<group>"; };
 		27D915D529FEB4820027C3BF /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D915D829FEB4820027C3BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D915DA29FEB4820027C3BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +103,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27C19E1E29FF16DE00DD19A5 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				27D9160F29FEC11E0027C3BF /* SignInViewController.swift */,
+				27D9162029FEC5070027C3BF /* SingInViewModel.swift */,
+				27D9161E29FEC4CB0027C3BF /* SignInView.swift */,
+				27C19E3F29FF646C00DD19A5 /* SignInStore.swift */,
+			);
+			name = SignIn;
+			sourceTree = "<group>";
+		};
+		27C19E2729FF1B4800DD19A5 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				27C19E2529FF1B4000DD19A5 /* SignUpViewController.swift */,
+				27C19E2829FF1BCD00DD19A5 /* SignUpViewModel.swift */,
+				27C19E2A29FF1BD900DD19A5 /* SignUpView.swift */,
+				27C19E2C29FF23C900DD19A5 /* SignUpStore.swift */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		27C19E2E29FF370400DD19A5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				27C19E2F29FF372100DD19A5 /* TabBarCoordinator.swift */,
+				27C19E3129FF3CA200DD19A5 /* TabItem.swift */,
+				27C19E3329FF580100DD19A5 /* TabBarController.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		27C19E3529FF5A7400DD19A5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				27C19E3629FF5A9300DD19A5 /* ProfileCoordinator.swift */,
+				27C19E3E29FF640300DD19A5 /* ProfileView */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		27C19E3E29FF640300DD19A5 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				27C19E3A29FF5B0600DD19A5 /* ProfileViewController.swift */,
+				27C19E3C29FF5B3500DD19A5 /* ProfileView.swift */,
+			);
+			name = ProfileView;
+			sourceTree = "<group>";
+		};
 		27D915CC29FEB4820027C3BF = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +234,8 @@
 		27D9160B29FEBFDC0027C3BF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				27C19E3529FF5A7400DD19A5 /* Profile */,
+				27C19E2E29FF370400DD19A5 /* TabBar */,
 				27D9161B29FEC4790027C3BF /* Components */,
 				27D9160C29FEBFE20027C3BF /* Auth */,
 			);
@@ -166,9 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				27D9160D29FEC0070027C3BF /* AuthCoordinator.swift */,
-				27D9160F29FEC11E0027C3BF /* SignInViewController.swift */,
-				27D9162029FEC5070027C3BF /* SingInViewModel.swift */,
-				27D9161E29FEC4CB0027C3BF /* SignInView.swift */,
+				27C19E2729FF1B4800DD19A5 /* SignUp */,
+				27C19E1E29FF16DE00DD19A5 /* SignIn */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -195,6 +274,9 @@
 			isa = PBXGroup;
 			children = (
 				27D9161C29FEC4850027C3BF /* CustomInputField.swift */,
+				27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */,
+				27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */,
+				27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -281,22 +363,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C19E4029FF646C00DD19A5 /* SignInStore.swift in Sources */,
 				27D9162129FEC5070027C3BF /* SingInViewModel.swift in Sources */,
 				27D915D929FEB4820027C3BF /* AppDelegate.swift in Sources */,
 				27D915DB29FEB4820027C3BF /* SceneDelegate.swift in Sources */,
+				27C19E3429FF580100DD19A5 /* TabBarController.swift in Sources */,
+				27C19E3029FF372100DD19A5 /* TabBarCoordinator.swift in Sources */,
 				27D9160429FEBD1A0027C3BF /* Router.swift in Sources */,
 				27D9160629FEBD5F0027C3BF /* InlineConfigurable.swift in Sources */,
+				27C19E3229FF3CA200DD19A5 /* TabItem.swift in Sources */,
+				27C19E3729FF5A9300DD19A5 /* ProfileCoordinator.swift in Sources */,
+				27C19E2B29FF1BD900DD19A5 /* SignUpView.swift in Sources */,
 				27D9160A29FEBE1E0027C3BF /* AppCoordinator.swift in Sources */,
 				27D9161529FEC1EA0027C3BF /* RestrictedUIHostingController.swift in Sources */,
+				27C19E3B29FF5B0600DD19A5 /* ProfileViewController.swift in Sources */,
 				27D9160829FEBD8A0027C3BF /* BaseCoordinator.swift in Sources */,
 				27D9161829FEC24E0027C3BF /* UIViewController+Extension.swift in Sources */,
 				27D9161A29FEC29C0027C3BF /* UIView+Extension.swift in Sources */,
 				27D915FD29FEBAC90027C3BF /* BaseViewController.swift in Sources */,
 				27D9161D29FEC4850027C3BF /* CustomInputField.swift in Sources */,
 				27D9161329FEC1940027C3BF /* View+Extension.swift in Sources */,
+				27C19E2029FF18B700DD19A5 /* AuthHeaderView.swift in Sources */,
+				27C19E2D29FF23C900DD19A5 /* SignUpStore.swift in Sources */,
+				27C19E2229FF18EF00DD19A5 /* RoundedShape.swift in Sources */,
+				27C19E3D29FF5B3500DD19A5 /* ProfileView.swift in Sources */,
+				27C19E2629FF1B4000DD19A5 /* SignUpViewController.swift in Sources */,
 				27D9160E29FEC0070027C3BF /* AuthCoordinator.swift in Sources */,
 				27D9161029FEC11E0027C3BF /* SignInViewController.swift in Sources */,
+				27C19E2429FF199B00DD19A5 /* PrimaryButtonView.swift in Sources */,
 				27D9161F29FEC4CB0027C3BF /* SignInView.swift in Sources */,
+				27C19E2929FF1BCD00DD19A5 /* SignUpViewModel.swift in Sources */,
 				27D915FF29FEBB200027C3BF /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
