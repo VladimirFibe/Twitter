@@ -15,6 +15,11 @@ final class AuthCoordinator: BaseCoordinator {
         let controller = makeSignUp()
         router.push(controller)
     }
+    
+    private func runPhotoSelector() {
+        let controller = makePhotoSelector()
+        router.push(controller)
+    }
 }
 
 extension AuthCoordinator {
@@ -29,8 +34,15 @@ extension AuthCoordinator {
     
     private func makeSignUp() -> BaseViewControllerProtocol {
         let navigation = SignUpNavigation {
-            print("SignUp")
+            self.runPhotoSelector()
         }
         return SignUpViewController(navigation: navigation)
+    }
+    
+    private func makePhotoSelector() -> BaseViewControllerProtocol {
+        let navigation = ProfilePhotoSelectorNavigation(login: {
+            self.onFlowDidFinish?()
+        })
+        return ProfilePhotoSelectorViewController(navigation: navigation)
     }
 }

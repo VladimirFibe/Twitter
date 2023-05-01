@@ -4,13 +4,15 @@ import Firebase
 struct ProfileView: View {
     let action: Callback
     var body: some View {
-        Button {
-            do {
-                try Auth.auth().signOut()
-                action()
-            } catch {}
-        } label: {
-            Text("Logout")
+        VStack {
+            Button {
+                do {
+                    try Auth.auth().signOut()
+                    action()
+                } catch {}
+            } label: {
+                Text("Logout")
+            }
         }
 
     }

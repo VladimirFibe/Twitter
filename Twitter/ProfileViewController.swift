@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ProfileNavigation {
     let logoutHandler: Callback
+    let menuHandler: Callback
 }
 
 final class ProfileViewController: BaseViewController {
@@ -20,6 +21,10 @@ final class ProfileViewController: BaseViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func navBarLeftButtonHandler() {
+        navigation.menuHandler()
     }
 }
 

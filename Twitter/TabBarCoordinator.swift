@@ -2,15 +2,24 @@ import UIKit
 
 final class TabBarCoordinator: BaseCoordinator {
     var onFlowDidFinish: Callback?
-    
+    var container: ContainerViewController!
     override func start() {
-        runTab()
+        runMain()
     }
     
-    private func runTab() {
+    private func runMain() {
+        let controller = makeMain()
+        router.setRootModule(controller, hideBar: true)
+    }
+}
+
+extension TabBarCoordinator {
+    private func makeMain() -> BaseViewControllerProtocol {
+        container = ContainerViewController()
         let tabBar = makeTabBar()
-        router.setRootModule(tabBar, hideBar: true)
-        
+        container.tabBar = tabBar
+        container.view.addSubview(tabBar.view)
+        container.addChild(tabBar)
         let modules = [makeProfile()]
         modules.forEach { coordinator, _ in
             addDependency(coordinator)
@@ -18,10 +27,9 @@ final class TabBarCoordinator: BaseCoordinator {
         }
         let viewControllers = modules.map { $0.1 }
         tabBar.setViewControllers(viewControllers, animated: false)
+        return container
     }
-}
-
-extension TabBarCoordinator {
+    
     private func makeTabBar() -> BaseViewControllerProtocol & UITabBarController {
         TabBarController()
     }
@@ -30,6 +38,9 @@ extension TabBarCoordinator {
         let navigationController = UINavigationController()
         let coordinator = ProfileCoordinator(router: RouterImpl(rootController: navigationController))
         coordinator.onFlowDidFinish = onFlowDidFinish
+        coordinator.menuHandler = {
+            self.container.toggleMenu()
+        }
         navigationController.tabBarItem = tabItem(for: .profile)
         return (coordinator, navigationController)
     }
