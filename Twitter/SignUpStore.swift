@@ -26,8 +26,7 @@ final class SignUpStore: Store<SignUpEvent, SignUpAction> {
         let data: [String: Any] = [
             "email": email,
             "username": username.lowercased(),
-            "fullname": fullname,
-            "uid": uid]
+            "fullname": fullname]
         try await Firestore.firestore().collection("persons").document(uid).setData(data)
         sendEvent(.selectPhoto)
     }

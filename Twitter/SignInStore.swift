@@ -21,7 +21,7 @@ final class SignInStore: Store<SignInEvent, SignInAction> {
     }
     
     func signIn(withEmail email: String, password: String) async throws {
-        let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
+        let _ = try await Auth.auth().signIn(withEmail: email, password: password)
         sendEvent(.login)
     }
 
