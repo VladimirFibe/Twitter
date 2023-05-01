@@ -6,12 +6,21 @@ final class AppCoordinator: BaseCoordinator {
         if Auth.auth().currentUser == nil {
             runAuth()
         } else {
-            print("main")
+            runTabbar()
         }
     }
     
     private func runAuth() {
         let coordinator = AuthCoordinator(router: router)
+        coordinator.onFlowDidFinish = {
+            self.start()
+        }
+        addDependency(coordinator)
+        coordinator.start()
+    }
+    
+    private func runTabbar() {
+        let coordinator = TabBarCoordinator(router: router)
         coordinator.onFlowDidFinish = {
             self.start()
         }
