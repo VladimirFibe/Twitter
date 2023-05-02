@@ -9,9 +9,7 @@ final class ProfileViewController: BaseViewController {
     private let navigation: ProfileNavigation
     
     private lazy var rootView: BridgedView = {
-        ProfileView(action: {
-            self.navigation.logoutHandler()
-        }).bridge()
+        ProfileView(PersonManager.shared.person).bridge()
     }()
     
     init(navigation: ProfileNavigation) {
@@ -21,10 +19,6 @@ final class ProfileViewController: BaseViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func navBarLeftButtonHandler() {
-        navigation.menuHandler()
     }
 }
 

@@ -22,10 +22,16 @@ final class AddTweetStore: Store<AddTweetEvent, AddTweetAction> {
     
     func uploadTweet(_ caption: String) async throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        let data: [String: Any] = ["uid": uid,
-                    "caption": caption,
-                    "likes": 0,
-                    "timestamp": Timestamp(date: Date())]
+        let person = PersonManager.shared.person
+        let data: [String: Any] = [
+            "uid": uid,
+            "caption": caption,
+            "likes": 0,
+            "timestamp": Timestamp(date: Date()),
+            "fullname": person.fullname,
+            "username": person.username,
+            "profileImageUrl": person.profileImageUrl
+        ]
         try await Firestore.firestore().collection("tweets").document().setData(data)
         sendEvent(.dismiss)
     }

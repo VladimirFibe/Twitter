@@ -6,6 +6,7 @@ enum FeedSection: Hashable {
 
 struct FeedNavigation {
     let addTweetHandle: Callback
+    let menuHandle: Callback
 }
 
 final class FeedViewController: BaseViewController {
@@ -68,6 +69,10 @@ extension FeedViewController {
     @objc func addTweetHandle() {
         navigation.addTweetHandle()
     }
+    
+    override func navBarLeftButtonHandler() {
+        navigation.menuHandle()
+    }
 }
 
 //MARK: - Setup Views
@@ -77,6 +82,7 @@ extension FeedViewController {
         setupTableView()
         setupAddTweetButton()
         setupObservers()
+        addNavBarButton(at: .left)
     }
     
     private func setupTableView() {

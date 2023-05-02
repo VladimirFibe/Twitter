@@ -38,6 +38,9 @@ extension TabBarCoordinator {
         let navigationController = UINavigationController()
         let coordinator = FeedCoordinator(router: RouterImpl(rootController: navigationController))
         navigationController.tabBarItem = tabItem(for: .feed)
+        coordinator.menuHandler = {
+            self.container.toggleMenu()
+        }
         return (coordinator, navigationController)
     }
     
@@ -45,6 +48,9 @@ extension TabBarCoordinator {
         let navigationController = UINavigationController()
         let coordinator = ExploreCoordinator(router: RouterImpl(rootController: navigationController))
         navigationController.tabBarItem = tabItem(for: .search)
+        coordinator.menuHandler = {
+            self.container.toggleMenu()
+        }
         return (coordinator, navigationController)
     }
     
@@ -59,17 +65,6 @@ extension TabBarCoordinator {
         let navigationController = UINavigationController()
         let coordinator = MessagesCoordinator(router: RouterImpl(rootController: navigationController))
         navigationController.tabBarItem = tabItem(for: .messages)
-        return (coordinator, navigationController)
-    }
-    
-    private func makeProfile() -> (BaseCoordinator, UINavigationController) {
-        let navigationController = UINavigationController()
-        let coordinator = ProfileCoordinator(router: RouterImpl(rootController: navigationController))
-        coordinator.onFlowDidFinish = onFlowDidFinish
-        coordinator.menuHandler = {
-            self.container.toggleMenu()
-        }
-//        navigationController.tabBarItem = tabItem(for: .profile)
         return (coordinator, navigationController)
     }
     

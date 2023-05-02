@@ -7,4 +7,7 @@ struct Tweet: Identifiable, Codable, Hashable {
     var timestamp: Timestamp = Timestamp(date: Date())
     let uid: String
     var likes: Int
+    let fullname: String
+    let username: String
+    let profileImageUrl: String
 }

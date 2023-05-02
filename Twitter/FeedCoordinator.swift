@@ -21,6 +21,8 @@ extension FeedCoordinator {
     private func makeFeed() -> BaseViewControllerProtocol {
         let navigation = FeedNavigation(addTweetHandle: {
             self.runAddTweet()
+        }, menuHandle: {
+            self.menuHandler?()
         })
         return FeedViewController(navigation: navigation)
     }
