@@ -8,10 +8,24 @@ final class FeedCoordinator: BaseCoordinator {
         let controller = makeFeed()
         router.setRootModule(controller)
     }
+    
+    private func runAddTweet() {
+        let controller = makeAddTweet()
+        controller.modalPresentationStyle = .fullScreen
+        router.present(controller)
+    }
 }
 
 extension FeedCoordinator {
+    
     private func makeFeed() -> BaseViewControllerProtocol {
-        return FeedViewController()
+        let navigation = FeedNavigation(addTweetHandle: {
+            self.runAddTweet()
+        })
+        return FeedViewController(navigation: navigation)
+    }
+    
+    private func makeAddTweet() -> BaseViewControllerProtocol {
+        return AddTweetViewController()
     }
 }

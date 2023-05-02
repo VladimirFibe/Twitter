@@ -35,6 +35,4 @@ final class ProfilePhotoSelectorStore: Store<ProfilePhotoSelectorEvent, ProfileP
             .updateData(["profileImageUrl": imageUrl])
         sendEvent(.login)
     }
-
-
 }

@@ -1,12 +1,3 @@
-//
-//  ExploreCoordinator.swift
-//  Twitter
-//
-//  Created by Vladimir on 01.05.2023.
-//
-
-import Foundation
-
 import UIKit
 
 final class ExploreCoordinator: BaseCoordinator {
