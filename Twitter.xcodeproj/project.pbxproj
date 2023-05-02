@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270374D82A00B88700F27641 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270374D72A00B88700F27641 /* Tweet.swift */; };
+		270374DA2A00BB0700F27641 /* TweetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270374D92A00BB0700F27641 /* TweetRowView.swift */; };
 		2757718D29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */; };
 		2757719029FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */; };
 		2757719229FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */; };
@@ -19,6 +21,11 @@
 		27769F662A002DAB00EC4AF8 /* MessagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F652A002DAB00EC4AF8 /* MessagesCoordinator.swift */; };
 		27769F682A002DB800EC4AF8 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F672A002DB800EC4AF8 /* NotificationsViewController.swift */; };
 		27769F6A2A002DC500EC4AF8 /* NotificationsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F692A002DC500EC4AF8 /* NotificationsCoordinator.swift */; };
+		27769F6C2A008C6600EC4AF8 /* ExploreStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F6B2A008C6600EC4AF8 /* ExploreStore.swift */; };
+		27769F6E2A00947200EC4AF8 /* PersonRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F6D2A00947200EC4AF8 /* PersonRowView.swift */; };
+		27769F702A009D9A00EC4AF8 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F6F2A009D9A00EC4AF8 /* FeedStore.swift */; };
+		27769F732A009F2E00EC4AF8 /* AddTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F722A009F2D00EC4AF8 /* AddTweetViewController.swift */; };
+		27B6E8512A00AF0100A46F8E /* AddTweetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6E8502A00AF0100A46F8E /* AddTweetStore.swift */; };
 		27C19E2029FF18B700DD19A5 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */; };
 		27C19E2229FF18EF00DD19A5 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */; };
 		27C19E2429FF199B00DD19A5 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */; };
@@ -68,6 +75,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		270374D72A00B88700F27641 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		270374D92A00BB0700F27641 /* TweetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRowView.swift; sourceTree = "<group>"; };
 		2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorViewController.swift; sourceTree = "<group>"; };
 		2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorViewModel.swift; sourceTree = "<group>"; };
@@ -81,6 +90,11 @@
 		27769F652A002DAB00EC4AF8 /* MessagesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCoordinator.swift; sourceTree = "<group>"; };
 		27769F672A002DB800EC4AF8 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		27769F692A002DC500EC4AF8 /* NotificationsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCoordinator.swift; sourceTree = "<group>"; };
+		27769F6B2A008C6600EC4AF8 /* ExploreStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreStore.swift; sourceTree = "<group>"; };
+		27769F6D2A00947200EC4AF8 /* PersonRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRowView.swift; sourceTree = "<group>"; };
+		27769F6F2A009D9A00EC4AF8 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
+		27769F722A009F2D00EC4AF8 /* AddTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTweetViewController.swift; sourceTree = "<group>"; };
+		27B6E8502A00AF0100A46F8E /* AddTweetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTweetStore.swift; sourceTree = "<group>"; };
 		27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
@@ -156,8 +170,9 @@
 		27769F572A002BDE00EC4AF8 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				27769F5B2A002C1200EC4AF8 /* FeedViewController.swift */,
 				27769F5D2A002C3200EC4AF8 /* FeedCoordinator.swift */,
+				27769F752A00A1C400EC4AF8 /* FeedView */,
+				27769F742A009F4000EC4AF8 /* AddTweetView */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -166,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				27769F5F2A002D8800EC4AF8 /* ExploreCoordinator.swift */,
-				27769F612A002D9200EC4AF8 /* ExploreViewController.swift */,
+				27769F712A009F1600EC4AF8 /* ExploreView */,
 			);
 			name = Explore;
 			sourceTree = "<group>";
@@ -187,6 +202,35 @@
 				27769F652A002DAB00EC4AF8 /* MessagesCoordinator.swift */,
 			);
 			name = Messages;
+			sourceTree = "<group>";
+		};
+		27769F712A009F1600EC4AF8 /* ExploreView */ = {
+			isa = PBXGroup;
+			children = (
+				27769F612A002D9200EC4AF8 /* ExploreViewController.swift */,
+				27769F6B2A008C6600EC4AF8 /* ExploreStore.swift */,
+				27769F6D2A00947200EC4AF8 /* PersonRowView.swift */,
+			);
+			name = ExploreView;
+			sourceTree = "<group>";
+		};
+		27769F742A009F4000EC4AF8 /* AddTweetView */ = {
+			isa = PBXGroup;
+			children = (
+				27769F722A009F2D00EC4AF8 /* AddTweetViewController.swift */,
+				27B6E8502A00AF0100A46F8E /* AddTweetStore.swift */,
+			);
+			name = AddTweetView;
+			sourceTree = "<group>";
+		};
+		27769F752A00A1C400EC4AF8 /* FeedView */ = {
+			isa = PBXGroup;
+			children = (
+				27769F6F2A009D9A00EC4AF8 /* FeedStore.swift */,
+				27769F5B2A002C1200EC4AF8 /* FeedViewController.swift */,
+				270374D92A00BB0700F27641 /* TweetRowView.swift */,
+			);
+			name = FeedView;
 			sourceTree = "<group>";
 		};
 		27C19E1E29FF16DE00DD19A5 /* SignIn */ = {
@@ -255,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				27C19E4F29FF930C00DD19A5 /* Person.swift */,
+				270374D72A00B88700F27641 /* Tweet.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -481,6 +526,8 @@
 				27C19E4029FF646C00DD19A5 /* SignInStore.swift in Sources */,
 				27D9162129FEC5070027C3BF /* SingInViewModel.swift in Sources */,
 				27D915D929FEB4820027C3BF /* AppDelegate.swift in Sources */,
+				27B6E8512A00AF0100A46F8E /* AddTweetStore.swift in Sources */,
+				27769F6C2A008C6600EC4AF8 /* ExploreStore.swift in Sources */,
 				27C19E4929FF921F00DD19A5 /* SideMenuViewModel.swift in Sources */,
 				27D915DB29FEB4820027C3BF /* SceneDelegate.swift in Sources */,
 				27769F682A002DB800EC4AF8 /* NotificationsViewController.swift in Sources */,
@@ -493,6 +540,7 @@
 				27D9160629FEBD5F0027C3BF /* InlineConfigurable.swift in Sources */,
 				27C19E3229FF3CA200DD19A5 /* TabItem.swift in Sources */,
 				27C19E3729FF5A9300DD19A5 /* ProfileCoordinator.swift in Sources */,
+				27769F6E2A00947200EC4AF8 /* PersonRowView.swift in Sources */,
 				27C19E2B29FF1BD900DD19A5 /* SignUpView.swift in Sources */,
 				27D9160A29FEBE1E0027C3BF /* AppCoordinator.swift in Sources */,
 				27C19E5029FF930C00DD19A5 /* Person.swift in Sources */,
@@ -506,11 +554,15 @@
 				27D9161829FEC24E0027C3BF /* UIViewController+Extension.swift in Sources */,
 				27769F5C2A002C1200EC4AF8 /* FeedViewController.swift in Sources */,
 				27D9161A29FEC29C0027C3BF /* UIView+Extension.swift in Sources */,
+				270374D82A00B88700F27641 /* Tweet.swift in Sources */,
+				270374DA2A00BB0700F27641 /* TweetRowView.swift in Sources */,
+				27769F732A009F2E00EC4AF8 /* AddTweetViewController.swift in Sources */,
 				27C19E4729FF918500DD19A5 /* SideMenuView.swift in Sources */,
 				27D915FD29FEBAC90027C3BF /* BaseViewController.swift in Sources */,
 				27D9161D29FEC4850027C3BF /* CustomInputField.swift in Sources */,
 				27D9161329FEC1940027C3BF /* View+Extension.swift in Sources */,
 				27C19E2029FF18B700DD19A5 /* AuthHeaderView.swift in Sources */,
+				27769F702A009D9A00EC4AF8 /* FeedStore.swift in Sources */,
 				27C19E2D29FF23C900DD19A5 /* SignUpStore.swift in Sources */,
 				27769F662A002DAB00EC4AF8 /* MessagesCoordinator.swift in Sources */,
 				27C19E2229FF18EF00DD19A5 /* RoundedShape.swift in Sources */,
