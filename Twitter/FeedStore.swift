@@ -3,24 +3,24 @@ import FirebaseAuth
 import FirebaseFirestore
 
 enum FeedEvent {
-    case reload([Person])
+    case reload([Tweet])
 }
 
 enum FeedAction {
-    case fetchPerson
+    case fetchTweets
 }
 
 final class FeedStore: Store<FeedEvent, FeedAction> {
     override func handleActions(action: FeedAction) {
         switch action {
-        case .fetchPerson:
-            statefulCall(fetchPersons)
+        case .fetchTweets:
+            statefulCall(fetchTweets)
         }
     }
     
-    func fetchPersons() async throws {
-        let snapshot = try await Firestore.firestore().collection("persons").getDocuments()
-        let persons = snapshot.documents.compactMap { try? $0.data(as: Person.self)}
-        sendEvent(.reload(persons))
+    func fetchTweets() async throws {
+        let snapshot = try await Firestore.firestore().collection("tweets").getDocuments()
+        let tweets = snapshot.documents.compactMap { try? $0.data(as: Tweet.self)}
+        sendEvent(.reload(tweets))
     }
 }
