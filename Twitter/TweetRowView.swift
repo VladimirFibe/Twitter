@@ -5,13 +5,19 @@ struct TweetRowView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .top, spacing: 12.0) {
-                Circle()
-                    .frame(width: 56, height: 56)
+                AsyncImage(url: URL(string: tweet.profileImageUrl)) { image in
+                    image.resizable()
+                        .scaledToFill()
+                        .clipShape(Circle())
+                        .frame(width: 56, height: 56)
+                } placeholder: {
+                    ProgressView()
+                }
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text("Bruce Wayne")
+                        Text(tweet.fullname)
                             .font(.subheadline).bold()
-                        Text("@batman")
+                        Text("@\(tweet.username)")
                             .foregroundColor(.gray)
                             .font(.caption)
                         Text("2w")
@@ -43,11 +49,5 @@ struct TweetRowView: View {
                 }
             }
         }
-    }
-}
-
-struct TweetRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        TweetRowView(tweet: Tweet(caption: "this is my first tweet", uid: "", likes: 0))
     }
 }

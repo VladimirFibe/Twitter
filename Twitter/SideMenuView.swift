@@ -1,5 +1,5 @@
 import SwiftUI
-
+import Firebase
 struct SideMenuView: View {
     let person = Person(fullname: "Vladimir Fibe", username: "macuser", email: "vladimir@fibeapp.ru", profileImageUrl: "https://avatarko.ru/img/kartinka/1/ohapka_deneg.jpg")
     var flag = true
@@ -23,7 +23,9 @@ struct SideMenuView: View {
                 }
             } else if row == .logout {
                 Button {
-                    
+                    do {
+                        try Auth.auth().signOut()
+                    } catch {}
                 } label: {
                     SideMenuRowView(row: row)
                 }

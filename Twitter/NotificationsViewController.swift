@@ -2,7 +2,7 @@ import SwiftUI
 
 final class NotificationsViewController: BaseViewController {
     private lazy var rootView: BridgedView = {
-        Text("Notifications").bridge()
+        ProfileView(PersonManager.shared.person).bridge()
     }()
 }
 
