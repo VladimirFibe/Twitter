@@ -16,6 +16,26 @@ final class MLoginViewController: BaseViewController {
     private lazy var bottomStack = UIStackView(arrangedSubviews: [bottomLabel, bottomButton])
 }
 
+//MARK: - Actions
+extension MLoginViewController {
+    @objc func loginButtonHandle() {
+        print(#function)
+    }
+    
+    @objc func forgotButtonHandle() {
+        print(#function)
+    }
+    
+    @objc func resendButtonHandle() {
+        print(#function)
+    }
+    
+    @objc func bottomButtonHandle() {
+        print(#function)
+    }
+}
+
+//MARK: - Setup Views
 extension MLoginViewController {
     override func setupViews() {
         super.setupViews()
@@ -80,6 +100,7 @@ extension MLoginViewController {
         forgotPasswordButton.setTitle("Forgot Password?", for: .normal)
         forgotPasswordButton.tintColor = .darkGray
         forgotPasswordButton.titleLabel?.textAlignment = .left
+        forgotPasswordButton.addTarget(self, action: #selector(forgotButtonHandle), for: .primaryActionTriggered)
         forgotPasswordButton.snp.makeConstraints {
             $0.top.equalTo(stack.snp.bottom).offset(10)
             $0.left.equalTo(stack.snp.left)
@@ -91,6 +112,7 @@ extension MLoginViewController {
         resendEmailButton.setTitle("Resend Email?", for: .normal)
         resendEmailButton.tintColor = .darkGray
         resendEmailButton.titleLabel?.textAlignment = .right
+        resendEmailButton.addTarget(self, action: #selector(resendButtonHandle), for: .primaryActionTriggered)
         resendEmailButton.snp.makeConstraints {
             $0.top.equalTo(stack.snp.bottom).offset(10)
             $0.right.equalTo(stack.snp.right)
@@ -101,6 +123,7 @@ extension MLoginViewController {
         view.addSubview(loginButton)
         loginButton.setImage(UIImage(named: "loginBtn")?.withRenderingMode(.alwaysOriginal),
                              for: .normal)
+        loginButton.addTarget(self, action: #selector(loginButtonHandle), for: .primaryActionTriggered)
         loginButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(forgotPasswordButton.snp.bottom).offset(20)
@@ -113,6 +136,7 @@ extension MLoginViewController {
     }
     
     private func setupBottomButton() {
+        bottomButton.addTarget(self, action: #selector(bottomButtonHandle), for: .primaryActionTriggered)
         bottomButton.setTitle("Sign Up", for: .normal)
     }
     
