@@ -113,6 +113,7 @@ extension MLoginViewController {
         resendEmailButton.tintColor = .darkGray
         resendEmailButton.titleLabel?.textAlignment = .right
         resendEmailButton.addTarget(self, action: #selector(resendButtonHandle), for: .primaryActionTriggered)
+        resendEmailButton.isHidden = true
         resendEmailButton.snp.makeConstraints {
             $0.top.equalTo(stack.snp.bottom).offset(10)
             $0.right.equalTo(stack.snp.right)
