@@ -28,9 +28,6 @@ final class AddTweetStore: Store<AddTweetEvent, AddTweetAction> {
             "caption": caption,
             "likes": 0,
             "timestamp": Timestamp(date: Date()),
-            "fullname": person.fullname,
-            "username": person.username,
-            "profileImageUrl": person.profileImageUrl
         ]
         try await Firestore.firestore().collection("tweets").document().setData(data)
         sendEvent(.dismiss)
