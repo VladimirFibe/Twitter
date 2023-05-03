@@ -6,6 +6,14 @@ final class MAuthTextField: BaseView {
     private let textField = UITextField()
     private let dividerView = UIView()
     
+    var isValid: Bool {
+        textField.text != ""
+    }
+    
+    var text: String {
+        textField.text ?? ""
+    }
+    
     func configure(with title: String,
                    isSecureTextEntry: Bool = false) {
         titleLabel.text = title

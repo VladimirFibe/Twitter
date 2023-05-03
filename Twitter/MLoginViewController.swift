@@ -1,5 +1,10 @@
 import UIKit
 
+enum MLoginType {
+    case login
+    case registration
+    case password
+}
 final class MLoginViewController: BaseViewController {
     private var isLogin = true {  didSet { updateUI() }}
     private let loginLabel = UILabel()
@@ -19,15 +24,29 @@ final class MLoginViewController: BaseViewController {
 //MARK: - Actions
 extension MLoginViewController {
     @objc func loginButtonHandle() {
-        print(#function)
+        if isDataInputed(for: isLogin ? .login : .registration) {
+            print(#function)
+            
+        } else {
+            ProgressHUD.showFailed("All Fields are required")
+        }
     }
     
     @objc func forgotButtonHandle() {
-        print(#function)
+        if isDataInputed(for: .password) {
+            print(#function)
+            print(emailField.text)
+        } else {
+            ProgressHUD.showFailed("Email is required")
+        }
     }
     
     @objc func resendButtonHandle() {
-        print(#function)
+        if isDataInputed(for: .password) {
+            print(#function)
+        } else {
+            ProgressHUD.showFailed("Email is required")
+        }
     }
     
     @objc func bottomButtonHandle() {
@@ -42,6 +61,22 @@ extension MLoginViewController {
         
         UIView.animate(withDuration: 0.5) {
             self.repeatPasswordField.isHidden = self.isLogin
+        }
+    }
+    
+    @objc func backgroundTapHandle() {
+        view.endEditing(false)
+    }
+    
+    private func isDataInputed(for type: MLoginType) -> Bool {
+        switch type {
+            
+        case .login:
+            return emailField.isValid && passwordField.isValid
+        case .registration:
+            return emailField.isValid && passwordField.isValid && passwordField.text == repeatPasswordField.text
+        case .password:
+            return emailField.isValid
         }
     }
 }
@@ -61,6 +96,7 @@ extension MLoginViewController {
         setupBottomStack()
         setupBottomLabel()
         setupBottomButton()
+        setupBackgroundTap()
         updateUI()
     }
     
@@ -156,5 +192,10 @@ extension MLoginViewController {
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(10)
             $0.centerX.equalToSuperview()
         }
+    }
+    
+    private func setupBackgroundTap() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundTapHandle))
+        view.addGestureRecognizer(tapGesture)
     }
 }
