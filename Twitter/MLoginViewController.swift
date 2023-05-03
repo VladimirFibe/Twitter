@@ -1,7 +1,7 @@
 import UIKit
 
 final class MLoginViewController: BaseViewController {
-
+    private var isLogin = true {  didSet { updateUI() }}
     private let loginLabel = UILabel()
     private let emailField = MAuthTextField()
     private let passwordField = MAuthTextField()
@@ -31,7 +31,18 @@ extension MLoginViewController {
     }
     
     @objc func bottomButtonHandle() {
-        print(#function)
+        isLogin.toggle()
+    }
+    
+    private func updateUI() {
+        loginButton.setImage(UIImage(named: isLogin ? "loginBtn" : "registerBtn")?
+            .withRenderingMode(.alwaysOriginal), for: .normal)
+        bottomButton.setTitle(isLogin ? "Sign Up" : "Login", for: .normal)
+        bottomLabel.text = isLogin ? "Don't have an account?" : "Have an account?"
+        
+        UIView.animate(withDuration: 0.5) {
+            self.repeatPasswordField.isHidden = self.isLogin
+        }
     }
 }
 
@@ -50,6 +61,7 @@ extension MLoginViewController {
         setupBottomStack()
         setupBottomLabel()
         setupBottomButton()
+        updateUI()
     }
     
     private func setupLoginLabel() {
@@ -122,8 +134,6 @@ extension MLoginViewController {
     
     private func setupLoginButton() {
         view.addSubview(loginButton)
-        loginButton.setImage(UIImage(named: "loginBtn")?.withRenderingMode(.alwaysOriginal),
-                             for: .normal)
         loginButton.addTarget(self, action: #selector(loginButtonHandle), for: .primaryActionTriggered)
         loginButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -132,13 +142,11 @@ extension MLoginViewController {
     }
     
     private func setupBottomLabel() {
-        bottomLabel.text = "Don't have an account?"
         bottomLabel.font = .avenirBook(size: 16)
     }
     
     private func setupBottomButton() {
         bottomButton.addTarget(self, action: #selector(bottomButtonHandle), for: .primaryActionTriggered)
-        bottomButton.setTitle("Sign Up", for: .normal)
     }
     
     private func setupBottomStack() {
