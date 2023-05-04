@@ -5,10 +5,6 @@ final class AppCoordinator: BaseCoordinator {
     var authListener: AuthStateDidChangeListenerHandle?
     
     override func start() {
-        autoLogin()
-    }
-    
-    private func autoLogin() {
         if let authListener = authListener {
             Auth.auth().removeStateDidChangeListener(authListener)
         }

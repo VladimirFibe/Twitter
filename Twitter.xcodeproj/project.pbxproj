@@ -18,6 +18,8 @@
 		273548042A020A770087B3E3 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273548032A020A770087B3E3 /* UIFont+Extension.swift */; };
 		273548062A020B0D0087B3E3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273548052A020B0D0087B3E3 /* BaseView.swift */; };
 		273548082A020BF30087B3E3 /* MAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273548072A020BF30087B3E3 /* MAuthTextField.swift */; };
+		2745BC882A03A7470043D22A /* MSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745BC872A03A7470043D22A /* MSettingsCoordinator.swift */; };
+		2745BC8B2A03A76E0043D22A /* MSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745BC8A2A03A76E0043D22A /* MSettingsViewController.swift */; };
 		2757718D29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */; };
 		2757719029FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */; };
 		2757719229FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */; };
@@ -35,6 +37,8 @@
 		27769F702A009D9A00EC4AF8 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F6F2A009D9A00EC4AF8 /* FeedStore.swift */; };
 		27769F732A009F2E00EC4AF8 /* AddTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F722A009F2D00EC4AF8 /* AddTweetViewController.swift */; };
 		27B6E8512A00AF0100A46F8E /* AddTweetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6E8502A00AF0100A46F8E /* AddTweetStore.swift */; };
+		27BF4FC82A03B8D000237627 /* MSettignsProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF4FC72A03B8D000237627 /* MSettignsProfileCell.swift */; };
+		27BF4FCA2A03B91400237627 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF4FC92A03B91400237627 /* BaseTableViewCell.swift */; };
 		27C19E2029FF18B700DD19A5 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */; };
 		27C19E2229FF18EF00DD19A5 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */; };
 		27C19E2429FF199B00DD19A5 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */; };
@@ -95,6 +99,8 @@
 		273548032A020A770087B3E3 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		273548052A020B0D0087B3E3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		273548072A020BF30087B3E3 /* MAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAuthTextField.swift; sourceTree = "<group>"; };
+		2745BC872A03A7470043D22A /* MSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsCoordinator.swift; sourceTree = "<group>"; };
+		2745BC8A2A03A76E0043D22A /* MSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsViewController.swift; sourceTree = "<group>"; };
 		2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorViewController.swift; sourceTree = "<group>"; };
 		2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorViewModel.swift; sourceTree = "<group>"; };
@@ -113,6 +119,8 @@
 		27769F6F2A009D9A00EC4AF8 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		27769F722A009F2D00EC4AF8 /* AddTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTweetViewController.swift; sourceTree = "<group>"; };
 		27B6E8502A00AF0100A46F8E /* AddTweetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTweetStore.swift; sourceTree = "<group>"; };
+		27BF4FC72A03B8D000237627 /* MSettignsProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettignsProfileCell.swift; sourceTree = "<group>"; };
+		27BF4FC92A03B91400237627 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				273547FE2A01F7290087B3E3 /* MAuth */,
+				2745BC892A03A74E0043D22A /* MSettings */,
 			);
 			name = Messager;
 			sourceTree = "<group>";
@@ -193,6 +202,16 @@
 				273548072A020BF30087B3E3 /* MAuthTextField.swift */,
 			);
 			name = MAuth;
+			sourceTree = "<group>";
+		};
+		2745BC892A03A74E0043D22A /* MSettings */ = {
+			isa = PBXGroup;
+			children = (
+				2745BC872A03A7470043D22A /* MSettingsCoordinator.swift */,
+				2745BC8A2A03A76E0043D22A /* MSettingsViewController.swift */,
+				27BF4FC72A03B8D000237627 /* MSettignsProfileCell.swift */,
+			);
+			name = MSettings;
 			sourceTree = "<group>";
 		};
 		2757718E29FFAE3C007EBE57 /* PhotSelector */ = {
@@ -404,6 +423,7 @@
 				27D915FE29FEBB200027C3BF /* Store.swift */,
 				27D9160529FEBD5F0027C3BF /* InlineConfigurable.swift */,
 				273548052A020B0D0087B3E3 /* BaseView.swift */,
+				27BF4FC92A03B91400237627 /* BaseTableViewCell.swift */,
 				27D9161629FEC1FE0027C3BF /* Bridge */,
 				27C5975E2A0267030043543F /* ProgressHUD.swift */,
 			);
@@ -572,6 +592,7 @@
 				27D915DB29FEB4820027C3BF /* SceneDelegate.swift in Sources */,
 				27769F682A002DB800EC4AF8 /* NotificationsViewController.swift in Sources */,
 				2757719429FFBB8C007EBE57 /* ProfilePhotoSelectorStore.swift in Sources */,
+				2745BC882A03A7470043D22A /* MSettingsCoordinator.swift in Sources */,
 				27C19E4529FF810C00DD19A5 /* MenuViewController.swift in Sources */,
 				2757719029FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift in Sources */,
 				27C19E3429FF580100DD19A5 /* TabBarController.swift in Sources */,
@@ -579,6 +600,7 @@
 				27D9160429FEBD1A0027C3BF /* Router.swift in Sources */,
 				27D9160629FEBD5F0027C3BF /* InlineConfigurable.swift in Sources */,
 				273548042A020A770087B3E3 /* UIFont+Extension.swift in Sources */,
+				27BF4FCA2A03B91400237627 /* BaseTableViewCell.swift in Sources */,
 				27C19E3229FF3CA200DD19A5 /* TabItem.swift in Sources */,
 				27769F6E2A00947200EC4AF8 /* PersonRowView.swift in Sources */,
 				27C19E2B29FF1BD900DD19A5 /* SignUpView.swift in Sources */,
@@ -586,6 +608,7 @@
 				27C19E5029FF930C00DD19A5 /* Person.swift in Sources */,
 				27769F642A002DA000EC4AF8 /* MessagesViewController.swift in Sources */,
 				273548082A020BF30087B3E3 /* MAuthTextField.swift in Sources */,
+				27BF4FC82A03B8D000237627 /* MSettignsProfileCell.swift in Sources */,
 				27D9161529FEC1EA0027C3BF /* RestrictedUIHostingController.swift in Sources */,
 				27C19E3B29FF5B0600DD19A5 /* ProfileViewController.swift in Sources */,
 				27769F6A2A002DC500EC4AF8 /* NotificationsCoordinator.swift in Sources */,
@@ -610,6 +633,7 @@
 				27C19E2D29FF23C900DD19A5 /* SignUpStore.swift in Sources */,
 				27769F662A002DAB00EC4AF8 /* MessagesCoordinator.swift in Sources */,
 				27C19E2229FF18EF00DD19A5 /* RoundedShape.swift in Sources */,
+				2745BC8B2A03A76E0043D22A /* MSettingsViewController.swift in Sources */,
 				270374DC2A00C20B00F27641 /* PersonManager.swift in Sources */,
 				27C19E3D29FF5B3500DD19A5 /* ProfileView.swift in Sources */,
 				2757718D29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift in Sources */,

@@ -20,7 +20,7 @@ extension TabBarCoordinator {
         container.tabBar = tabBar
         container.view.addSubview(tabBar.view)
         container.addChild(tabBar)
-        let modules = [makeFeed(), makeExplore(), makeNotifications(), makeMessages()]
+        let modules = [makeFeed(), makeExplore(), makeNotifications(), makeMessages(), makeSettings()]
         modules.forEach { coordinator, _ in
             addDependency(coordinator)
             coordinator.start()
@@ -65,6 +65,13 @@ extension TabBarCoordinator {
         let navigationController = UINavigationController()
         let coordinator = MessagesCoordinator(router: RouterImpl(rootController: navigationController))
         navigationController.tabBarItem = tabItem(for: .messages)
+        return (coordinator, navigationController)
+    }
+    
+    private func makeSettings() -> (BaseCoordinator, UINavigationController) {
+        let navigationController = UINavigationController()
+        let coordinator = MSettingsCoordinator(router: RouterImpl(rootController: navigationController))
+        navigationController.tabBarItem = tabItem(for: .settings)
         return (coordinator, navigationController)
     }
     
