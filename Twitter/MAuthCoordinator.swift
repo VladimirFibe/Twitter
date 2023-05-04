@@ -15,6 +15,9 @@ final class MAuthCoordinator: BaseCoordinator {
 
 extension MAuthCoordinator {
     private func makeLogin() -> BaseViewControllerProtocol {
-        MLoginViewController()
+        let navigation = MLoginNavigation {
+            self.onFlowDidFinish?()
+        }
+        return MLoginViewController(navigation: navigation)
     }
 }

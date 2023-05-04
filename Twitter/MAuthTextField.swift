@@ -6,6 +6,14 @@ final class MAuthTextField: BaseView {
     private let textField = UITextField()
     private let dividerView = UIView()
     
+    var isValid: Bool {
+        textField.text != ""
+    }
+    
+    var text: String {
+        textField.text ?? ""
+    }
+    
     func configure(with title: String,
                    isSecureTextEntry: Bool = false) {
         titleLabel.text = title
@@ -15,16 +23,24 @@ final class MAuthTextField: BaseView {
 }
 
 extension MAuthTextField {
+    @objc func textFieldDidChanged() {
+        titleLabel.isHidden = textField.text?.isEmpty != false
+    }
+}
+
+extension MAuthTextField {
     override func setupViews() {
         setupTitleLable()
         setupTextField()
         setupDividerView()
+        setupTextFieldDelegate()
     }
     
     private func setupTitleLable() {
         addSubview(titleLabel)
         titleLabel.font = .avenirBook(size: 20)
         titleLabel.textColor = .lightGray
+        titleLabel.isHidden = true
         titleLabel.snp.makeConstraints {
             $0.top.left.right.equalToSuperview()
         }
@@ -48,5 +64,9 @@ extension MAuthTextField {
             $0.left.right.equalTo(titleLabel)
             $0.bottom.equalToSuperview()
         }
+    }
+    
+    private func setupTextFieldDelegate() {
+        textField.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
     }
 }
