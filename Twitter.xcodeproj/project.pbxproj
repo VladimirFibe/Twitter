@@ -56,6 +56,7 @@
 		27C19E4D29FF929900DD19A5 /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E4C29FF929900DD19A5 /* SideMenuRowView.swift */; };
 		27C19E5029FF930C00DD19A5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E4F29FF930C00DD19A5 /* Person.swift */; };
 		27C5975F2A0267030043543F /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C5975E2A0267030043543F /* ProgressHUD.swift */; };
+		27C597612A02C3B70043543F /* MLoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C597602A02C3B70043543F /* MLoginStore.swift */; };
 		27D915D929FEB4820027C3BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D915D829FEB4820027C3BF /* AppDelegate.swift */; };
 		27D915DB29FEB4820027C3BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D915DA29FEB4820027C3BF /* SceneDelegate.swift */; };
 		27D915E229FEB4820027C3BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D915E129FEB4820027C3BF /* Assets.xcassets */; };
@@ -133,6 +134,7 @@
 		27C19E4C29FF929900DD19A5 /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
 		27C19E4F29FF930C00DD19A5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		27C5975E2A0267030043543F /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		27C597602A02C3B70043543F /* MLoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLoginStore.swift; sourceTree = "<group>"; };
 		27D915D529FEB4820027C3BF /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D915D829FEB4820027C3BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D915DA29FEB4820027C3BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				273547FF2A01F7700087B3E3 /* MAuthCoordinator.swift */,
 				273548012A01FA3F0087B3E3 /* MLoginViewController.swift */,
+				27C597602A02C3B70043543F /* MLoginStore.swift */,
 				273548072A020BF30087B3E3 /* MAuthTextField.swift */,
 			);
 			name = MAuth;
@@ -353,10 +356,10 @@
 		27D915D729FEB4820027C3BF /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				27D915F829FEB5A20027C3BF /* App */,
 				273547FD2A01F6CD0087B3E3 /* Messager */,
 				27C19E4E29FF92FF00DD19A5 /* Model */,
 				27D915F929FEBA2D0027C3BF /* Core */,
-				27D915F829FEB5A20027C3BF /* App */,
 				27D9160B29FEBFDC0027C3BF /* Features */,
 				27D915F729FEB5770027C3BF /* Supporting Files */,
 				270374DB2A00C20B00F27641 /* PersonManager.swift */,
@@ -588,6 +591,7 @@
 				27769F6A2A002DC500EC4AF8 /* NotificationsCoordinator.swift in Sources */,
 				2757719229FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift in Sources */,
 				27C5975F2A0267030043543F /* ProgressHUD.swift in Sources */,
+				27C597612A02C3B70043543F /* MLoginStore.swift in Sources */,
 				27C19E4D29FF929900DD19A5 /* SideMenuRowView.swift in Sources */,
 				27D9160829FEBD8A0027C3BF /* BaseCoordinator.swift in Sources */,
 				27D9161829FEC24E0027C3BF /* UIViewController+Extension.swift in Sources */,

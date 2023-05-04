@@ -1,11 +1,19 @@
 import UIKit
+import Firebase
 
 enum MLoginType {
     case login
     case registration
     case password
 }
+
+struct MLoginNavigation {
+    let login: Callback
+}
+
 final class MLoginViewController: BaseViewController {
+    private let navigation: MLoginNavigation
+    private let store = MLoginStore()
     private var isLogin = true {  didSet { updateUI() }}
     private let loginLabel = UILabel()
     private let emailField = MAuthTextField()
@@ -19,14 +27,48 @@ final class MLoginViewController: BaseViewController {
     private let bottomLabel = UILabel()
     private let bottomButton = UIButton(type: .system)
     private lazy var bottomStack = UIStackView(arrangedSubviews: [bottomLabel, bottomButton])
+    
+    init(navigation: MLoginNavigation) {
+            self.navigation = navigation
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupObservers() {
+        store
+            .events
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] event in
+                guard let self = self else { return }
+                switch event {
+                case .login:
+                    self.navigation.login()
+                case .linkForResetPasswordSended:
+                    ProgressHUD.showSucceed("Check \(emailField.text) for reset password link")
+                case .linkForVerifySended:
+                    ProgressHUD.showSucceed("Check \(emailField.text) for verification link")
+                    resendEmailButton.isHidden = false
+                    isLogin = true
+                case .notVerifiedEmail:
+                    ProgressHUD.showFailed("Please verify email.")
+                    resendEmailButton.isHidden = false
+                }
+            }.store(in: &bag)
+    }
 }
 
 //MARK: - Actions
 extension MLoginViewController {
     @objc func loginButtonHandle() {
         if isDataInputed(for: isLogin ? .login : .registration) {
-            print(#function)
-            
+            if isLogin {
+                store.actions.send(.signInWith(emailField.text, passwordField.text))
+            } else {
+                store.actions.send(.signUpWith(emailField.text, passwordField.text))
+            }
         } else {
             ProgressHUD.showFailed("All Fields are required")
         }
@@ -34,19 +76,14 @@ extension MLoginViewController {
     
     @objc func forgotButtonHandle() {
         if isDataInputed(for: .password) {
-            print(#function)
-            print(emailField.text)
+            store.actions.send(.sendPasswordReset(emailField.text))
         } else {
             ProgressHUD.showFailed("Email is required")
         }
     }
     
     @objc func resendButtonHandle() {
-        if isDataInputed(for: .password) {
-            print(#function)
-        } else {
-            ProgressHUD.showFailed("Email is required")
-        }
+        store.actions.send(.sendEmailVerification)
     }
     
     @objc func bottomButtonHandle() {
@@ -85,6 +122,7 @@ extension MLoginViewController {
 extension MLoginViewController {
     override func setupViews() {
         super.setupViews()
+        setupObservers()
         setupLoginLabel()
         setupFieldStack()
         setupEmailField()

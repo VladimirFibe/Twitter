@@ -9,6 +9,13 @@ struct Person: Identifiable, Codable, Hashable, Equatable {
     let email: String
     let profileImageUrl: String
     
+    enum CodingKeys: CodingKey {
+        case fullname
+        case username
+        case email
+        case profileImageUrl
+    }
+    
     static var currentUid: String? {
         Auth.auth().currentUser?.uid
     }

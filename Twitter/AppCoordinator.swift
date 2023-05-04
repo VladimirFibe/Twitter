@@ -1,24 +1,30 @@
 import Foundation
-import Firebase
+import FirebaseAuth
 
 final class AppCoordinator: BaseCoordinator {
+    var authListener: AuthStateDidChangeListenerHandle?
+    
     override func start() {
-        runMessager()
+        autoLogin()
     }
     
-    private func runMessager() {
-        if Auth.auth().currentUser == nil {
-            runMAuth()
-        } else {
-            runTabbar()
+    private func autoLogin() {
+        if let authListener = authListener {
+            Auth.auth().removeStateDidChangeListener(authListener)
+        }
+        authListener = Auth.auth().addStateDidChangeListener { auth, user in
+            DispatchQueue.main.async {
+                if user == nil {
+                    self.runMAuth()
+                } else {
+                    self.runTabbar()
+                }
+            }
         }
     }
     
     private func runMAuth() {
         let coordinator = MAuthCoordinator(router: router)
-        coordinator.onFlowDidFinish = {
-            self.start()
-        }
         addDependency(coordinator)
         coordinator.start()
     }
@@ -32,18 +38,12 @@ final class AppCoordinator: BaseCoordinator {
     }
     private func runAuth() {
         let coordinator = AuthCoordinator(router: router)
-        coordinator.onFlowDidFinish = {
-            self.start()
-        }
         addDependency(coordinator)
         coordinator.start()
     }
     
     private func runTabbar() {
         let coordinator = TabBarCoordinator(router: router)
-        coordinator.onFlowDidFinish = {
-            self.start()
-        }
         addDependency(coordinator)
         coordinator.start()
     }
