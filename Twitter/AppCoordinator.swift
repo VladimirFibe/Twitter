@@ -11,6 +11,7 @@ final class AppCoordinator: BaseCoordinator {
         authListener = Auth.auth().addStateDidChangeListener { auth, user in
             DispatchQueue.main.async {
                 if user == nil {
+                    Person.currentPerson = nil
                     self.runMAuth()
                 } else {
                     self.runTabbar()

@@ -14,10 +14,22 @@ final class MSettingsCoordinator: BaseCoordinator {
         let controller = makeSettings()
         router.setRootModule(controller)
     }
+    
+    private func runEditProfile() {
+        let controller = makeEditProfile()
+        router.push(controller)
+    }
 }
 
 extension MSettingsCoordinator {
     private func makeSettings() -> BaseViewControllerProtocol {
-        return MSettingsViewController()
+        let navigation = MSettingsNavigation {
+            self.runEditProfile()
+        }
+        return MSettingsViewController(navigation: navigation)
+    }
+    
+    private func makeEditProfile() -> BaseViewControllerProtocol {
+        return MProfileViewController()
     }
 }
