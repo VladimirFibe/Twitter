@@ -38,14 +38,16 @@ open class BaseViewController: UIViewController, BaseViewControllerProtocol {
 extension BaseViewController {
     func addNavBarButton(at position: NavBarPosition, with title: String = "") {
         let button = UIButton(type: .system)
+        button.tintColor = .label
         
         switch position {
         case .left:
             button.addTarget(self, action: #selector(navBarLeftButtonHandler), for: .primaryActionTriggered)
-            button.setImage(UIImage(systemName: "line.3.horizontal"), for: .normal)
+            button.setImage(UIImage(systemName: "chevron.left"), for: .normal)
             navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
         case .right:
             button.addTarget(self, action: #selector(navBarRightButtonHandler), for: .primaryActionTriggered)
+            button.setTitle(title, for: .normal)
             navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
         }
     }

@@ -8,12 +8,17 @@ struct Person: Identifiable, Codable, Hashable, Equatable {
     let username: String
     let email: String
     let profileImageUrl: String
+    let status = Status.Available.rawValue
     
+    var uid: String {
+        id ?? ""
+    }
     enum CodingKeys: CodingKey {
         case fullname
         case username
         case email
         case profileImageUrl
+        case status
     }
     
     static var currentUid: String? {

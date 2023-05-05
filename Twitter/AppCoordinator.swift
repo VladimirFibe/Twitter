@@ -5,16 +5,13 @@ final class AppCoordinator: BaseCoordinator {
     var authListener: AuthStateDidChangeListenerHandle?
     
     override func start() {
-        autoLogin()
-    }
-    
-    private func autoLogin() {
         if let authListener = authListener {
             Auth.auth().removeStateDidChangeListener(authListener)
         }
         authListener = Auth.auth().addStateDidChangeListener { auth, user in
             DispatchQueue.main.async {
                 if user == nil {
+                    Person.currentPerson = nil
                     self.runMAuth()
                 } else {
                     self.runTabbar()
