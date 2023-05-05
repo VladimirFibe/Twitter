@@ -37,11 +37,15 @@
 		27769F702A009D9A00EC4AF8 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F6F2A009D9A00EC4AF8 /* FeedStore.swift */; };
 		27769F732A009F2E00EC4AF8 /* AddTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27769F722A009F2D00EC4AF8 /* AddTweetViewController.swift */; };
 		27B6E8512A00AF0100A46F8E /* AddTweetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6E8502A00AF0100A46F8E /* AddTweetStore.swift */; };
+		27B843FA2A046F2300300B88 /* MProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B843F92A046F2300300B88 /* MProfileStore.swift */; };
+		27B843FD2A049AB100300B88 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B843FC2A049AB100300B88 /* FileStorage.swift */; };
 		27BF4FC82A03B8D000237627 /* MSettignsProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF4FC72A03B8D000237627 /* MSettignsProfileCell.swift */; };
 		27BF4FCA2A03B91400237627 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF4FC92A03B91400237627 /* BaseTableViewCell.swift */; };
 		27BF4FCF2A03E18D00237627 /* MProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF4FCE2A03E18D00237627 /* MProfileViewController.swift */; };
 		27BF4FD22A03E61D00237627 /* MEditProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF4FD12A03E61D00237627 /* MEditProfileCell.swift */; };
 		27BF4FD42A03E93E00237627 /* MEditUsernameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF4FD32A03E93E00237627 /* MEditUsernameCell.swift */; };
+		27BF4FD82A03FA8B00237627 /* MStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF4FD72A03FA8B00237627 /* MStatusViewController.swift */; };
+		27BF4FDB2A03FB7100237627 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF4FDA2A03FB7100237627 /* Status.swift */; };
 		27C19E2029FF18B700DD19A5 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */; };
 		27C19E2229FF18EF00DD19A5 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */; };
 		27C19E2429FF199B00DD19A5 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */; };
@@ -122,11 +126,15 @@
 		27769F6F2A009D9A00EC4AF8 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		27769F722A009F2D00EC4AF8 /* AddTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTweetViewController.swift; sourceTree = "<group>"; };
 		27B6E8502A00AF0100A46F8E /* AddTweetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTweetStore.swift; sourceTree = "<group>"; };
+		27B843F92A046F2300300B88 /* MProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProfileStore.swift; sourceTree = "<group>"; };
+		27B843FC2A049AB100300B88 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		27BF4FC72A03B8D000237627 /* MSettignsProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettignsProfileCell.swift; sourceTree = "<group>"; };
 		27BF4FC92A03B91400237627 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		27BF4FCE2A03E18D00237627 /* MProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MProfileViewController.swift; sourceTree = "<group>"; };
 		27BF4FD12A03E61D00237627 /* MEditProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEditProfileCell.swift; sourceTree = "<group>"; };
 		27BF4FD32A03E93E00237627 /* MEditUsernameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEditUsernameCell.swift; sourceTree = "<group>"; };
+		27BF4FD72A03FA8B00237627 /* MStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStatusViewController.swift; sourceTree = "<group>"; };
+		27BF4FDA2A03FB7100237627 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		27C19E1F29FF18B700DD19A5 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		27C19E2129FF18EF00DD19A5 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		27C19E2329FF199B00DD19A5 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 		273547FD2A01F6CD0087B3E3 /* Messager */ = {
 			isa = PBXGroup;
 			children = (
+				27B843FB2A049A9A00300B88 /* FirebaseHelpers */,
 				273547FE2A01F7290087B3E3 /* MAuth */,
 				2745BC892A03A74E0043D22A /* MSettings */,
 			);
@@ -214,13 +223,14 @@
 			isa = PBXGroup;
 			children = (
 				2745BC872A03A7470043D22A /* MSettingsCoordinator.swift */,
+				27BF4FD92A03FA9300237627 /* MStatus */,
 				27BF4FD02A03E1CB00237627 /* MProfile */,
 				27BF4FCB2A03E16800237627 /* MSettings */,
 			);
 			name = MSettings;
 			sourceTree = "<group>";
 		};
-		2757718E29FFAE3C007EBE57 /* PhotSelector */ = {
+		2757718E29FFAE3C007EBE57 /* PhotoSelector */ = {
 			isa = PBXGroup;
 			children = (
 				2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */,
@@ -228,7 +238,7 @@
 				2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */,
 				2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */,
 			);
-			name = PhotSelector;
+			name = PhotoSelector;
 			sourceTree = "<group>";
 		};
 		27769F572A002BDE00EC4AF8 /* Feed */ = {
@@ -297,6 +307,14 @@
 			name = FeedView;
 			sourceTree = "<group>";
 		};
+		27B843FB2A049A9A00300B88 /* FirebaseHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				27B843FC2A049AB100300B88 /* FileStorage.swift */,
+			);
+			name = FirebaseHelpers;
+			sourceTree = "<group>";
+		};
 		27BF4FCB2A03E16800237627 /* MSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,10 +328,19 @@
 			isa = PBXGroup;
 			children = (
 				27BF4FCE2A03E18D00237627 /* MProfileViewController.swift */,
+				27B843F92A046F2300300B88 /* MProfileStore.swift */,
 				27BF4FD12A03E61D00237627 /* MEditProfileCell.swift */,
 				27BF4FD32A03E93E00237627 /* MEditUsernameCell.swift */,
 			);
 			name = MProfile;
+			sourceTree = "<group>";
+		};
+		27BF4FD92A03FA9300237627 /* MStatus */ = {
+			isa = PBXGroup;
+			children = (
+				27BF4FD72A03FA8B00237627 /* MStatusViewController.swift */,
+			);
+			name = MStatus;
 			sourceTree = "<group>";
 		};
 		27C19E1E29FF16DE00DD19A5 /* SignIn */ = {
@@ -376,6 +403,7 @@
 			children = (
 				27C19E4F29FF930C00DD19A5 /* Person.swift */,
 				270374D72A00B88700F27641 /* Tweet.swift */,
+				27BF4FDA2A03FB7100237627 /* Status.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -487,7 +515,7 @@
 				27D9160D29FEC0070027C3BF /* AuthCoordinator.swift */,
 				27C19E2729FF1B4800DD19A5 /* SignUp */,
 				27C19E1E29FF16DE00DD19A5 /* SignIn */,
-				2757718E29FFAE3C007EBE57 /* PhotSelector */,
+				2757718E29FFAE3C007EBE57 /* PhotoSelector */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -619,6 +647,7 @@
 				2757719429FFBB8C007EBE57 /* ProfilePhotoSelectorStore.swift in Sources */,
 				2745BC882A03A7470043D22A /* MSettingsCoordinator.swift in Sources */,
 				27C19E4529FF810C00DD19A5 /* MenuViewController.swift in Sources */,
+				27B843FD2A049AB100300B88 /* FileStorage.swift in Sources */,
 				2757719029FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift in Sources */,
 				27C19E3429FF580100DD19A5 /* TabBarController.swift in Sources */,
 				27BF4FD42A03E93E00237627 /* MEditUsernameCell.swift in Sources */,
@@ -633,12 +662,14 @@
 				27C19E2B29FF1BD900DD19A5 /* SignUpView.swift in Sources */,
 				27D9160A29FEBE1E0027C3BF /* AppCoordinator.swift in Sources */,
 				27C19E5029FF930C00DD19A5 /* Person.swift in Sources */,
+				27BF4FDB2A03FB7100237627 /* Status.swift in Sources */,
 				27769F642A002DA000EC4AF8 /* MessagesViewController.swift in Sources */,
 				273548082A020BF30087B3E3 /* MAuthTextField.swift in Sources */,
 				27BF4FC82A03B8D000237627 /* MSettignsProfileCell.swift in Sources */,
 				27D9161529FEC1EA0027C3BF /* RestrictedUIHostingController.swift in Sources */,
 				27C19E3B29FF5B0600DD19A5 /* ProfileViewController.swift in Sources */,
 				27769F6A2A002DC500EC4AF8 /* NotificationsCoordinator.swift in Sources */,
+				27B843FA2A046F2300300B88 /* MProfileStore.swift in Sources */,
 				2757719229FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift in Sources */,
 				27C5975F2A0267030043543F /* ProgressHUD.swift in Sources */,
 				27C597612A02C3B70043543F /* MLoginStore.swift in Sources */,
@@ -671,6 +702,7 @@
 				27D9161029FEC11E0027C3BF /* SignInViewController.swift in Sources */,
 				27BF4FD22A03E61D00237627 /* MEditProfileCell.swift in Sources */,
 				27C19E2429FF199B00DD19A5 /* PrimaryButtonView.swift in Sources */,
+				27BF4FD82A03FA8B00237627 /* MStatusViewController.swift in Sources */,
 				27769F622A002D9200EC4AF8 /* ExploreViewController.swift in Sources */,
 				273548022A01FA3F0087B3E3 /* MLoginViewController.swift in Sources */,
 				27D9161F29FEC4CB0027C3BF /* SignInView.swift in Sources */,
@@ -817,7 +849,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Twitter/Info.plist;
@@ -845,7 +877,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Twitter/Info.plist;

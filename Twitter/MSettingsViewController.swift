@@ -27,6 +27,11 @@ final class MSettingsViewController: BaseViewController {
     func currentSection(_ index: Int) -> SettingsCases {
         SettingsCases(rawValue: index) ?? .profile
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 }
 
 extension MSettingsViewController {

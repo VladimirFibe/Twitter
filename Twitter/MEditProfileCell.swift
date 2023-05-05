@@ -6,8 +6,17 @@ final class MEditProfileCell: BaseTableViewCell {
     private let editButton = UIButton(type: .system)
     private let titleLabel = UILabel()
     
-    func configure(with person: Person) {
-        avatarView.kf.setImage(with: URL(string: person.profileImageUrl), placeholder: UIImage(named: "avatar"))
+    func configure(with person: Person, target: Any?, action: Selector, avatar: UIImage?) {
+        if let avatar {
+            avatarView.image = avatar
+        } else {
+            avatarView.kf.setImage(with: URL(string: person.profileImageUrl), placeholder: UIImage(named: "avatar"))
+        }
+        editButton.addTarget(target, action: action, for: .primaryActionTriggered)
+    }
+    
+    func configure(withImage image: UIImage?) {
+        avatarView.image = image
     }
 }
 
@@ -20,6 +29,7 @@ extension MEditProfileCell {
     
     private func setupAvatarView() {
         contentView.addSubview(avatarView)
+        avatarView.contentMode = .scaleAspectFill
         avatarView.snp.makeConstraints {
             $0.left.equalToSuperview().offset(16)
             $0.top.equalToSuperview().inset(10)
