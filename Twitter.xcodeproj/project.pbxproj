@@ -20,6 +20,7 @@
 		273548082A020BF30087B3E3 /* MAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273548072A020BF30087B3E3 /* MAuthTextField.swift */; };
 		2745BC882A03A7470043D22A /* MSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745BC872A03A7470043D22A /* MSettingsCoordinator.swift */; };
 		2745BC8B2A03A76E0043D22A /* MSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745BC8A2A03A76E0043D22A /* MSettingsViewController.swift */; };
+		275046BA2A07CA8000768C30 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275046B92A07CA8000768C30 /* UIImage+Extension.swift */; };
 		2757718D29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */; };
 		2757719029FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */; };
 		2757719229FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */; };
@@ -108,6 +109,7 @@
 		273548072A020BF30087B3E3 /* MAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAuthTextField.swift; sourceTree = "<group>"; };
 		2745BC872A03A7470043D22A /* MSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsCoordinator.swift; sourceTree = "<group>"; };
 		2745BC8A2A03A76E0043D22A /* MSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsViewController.swift; sourceTree = "<group>"; };
+		275046B92A07CA8000768C30 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		2757718C29FFADD1007EBE57 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		2757718F29FFAE54007EBE57 /* ProfilePhotoSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorViewController.swift; sourceTree = "<group>"; };
 		2757719129FFB3D3007EBE57 /* ProfilePhotoSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorViewModel.swift; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 				273548032A020A770087B3E3 /* UIFont+Extension.swift */,
 				27D9161729FEC24E0027C3BF /* UIViewController+Extension.swift */,
 				27D9161929FEC29C0027C3BF /* UIView+Extension.swift */,
+				275046B92A07CA8000768C30 /* UIImage+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				27C5975F2A0267030043543F /* ProgressHUD.swift in Sources */,
 				27C597612A02C3B70043543F /* MLoginStore.swift in Sources */,
 				27C19E4D29FF929900DD19A5 /* SideMenuRowView.swift in Sources */,
+				275046BA2A07CA8000768C30 /* UIImage+Extension.swift in Sources */,
 				27D9160829FEBD8A0027C3BF /* BaseCoordinator.swift in Sources */,
 				27D9161829FEC24E0027C3BF /* UIViewController+Extension.swift in Sources */,
 				27769F5C2A002C1200EC4AF8 /* FeedViewController.swift in Sources */,

@@ -8,9 +8,17 @@ final class MSettignsProfileCell: BaseTableViewCell {
     private let subtitleLabel = UILabel()
     
     func configure(with person: Person) {
-        avatarView.kf.setImage(with: URL(string: person.profileImageUrl), placeholder: UIImage(named: "avatar"))
+//        avatarView.kf.setImage(with: URL(string: person.profileImageUrl), placeholder: UIImage(named: "avatar"))
         titleLabel.text = person.username
+        print(person.profileImageUrl)
         subtitleLabel.text = "Я свободен!"
+        FileStorage.downloadImage(person: person) { image in
+            if let image {
+                self.avatarView.image = image.circleMasked
+            } else {
+                print("пустой имидж")
+            }
+        }
     }
 }
 

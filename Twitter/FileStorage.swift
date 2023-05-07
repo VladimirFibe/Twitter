@@ -33,19 +33,25 @@ final class FileStorage {
     }
     
     class func downloadImage(person: Person, completion: @escaping (UIImage?) -> Void) {
-        if fileExistsAtPath(person.uid) {
-            completion(UIImage(contentsOfFile: fileInDocumetsDirectory(fileName: person.uid)))
+        guard let uid = Person.currentUid else { return }
+        if fileExistsAtPath(uid) {
+            if let image = UIImage(contentsOfFile: fileInDocumetsDirectory(fileName: uid)) {
+                completion(image)
+            } else {
+                completion(UIImage(named: "avatar"))
+            }
         } else if let url = URL(string: person.profileImageUrl) {
             let downloadQueue = DispatchQueue(label: "imageDownloadQueue")
             downloadQueue.async {
                 if let data = NSData(contentsOf: url)  {
-                    FileStorage.saveFileLocally(fileData: data, filename: person.uid)
+                    FileStorage.saveFileLocally(fileData: data, filename: uid)
                     DispatchQueue.main.async {
+                        print("imageDownloaded")
                         completion(UIImage(data: data as Data))
                     }
                 } else {
                     DispatchQueue.main.async {
-                        completion(nil)
+                        completion(UIImage(named: "avatar"))
                     }
                 }
             }
@@ -56,7 +62,6 @@ final class FileStorage {
     
     class func saveFileLocally(fileData: NSData, filename: String) {
         let docUrl = getDocumentsURL().appending(path: filename, directoryHint: .notDirectory)
-        print(docUrl)
         fileData.write(to: docUrl, atomically: true)
     }
 }
@@ -68,7 +73,10 @@ func getDocumentsURL() -> URL {
 }
 
 func fileInDocumetsDirectory(fileName: String) -> String {
-  getDocumentsURL().appendingPathComponent(fileName).path
+    
+  let result = getDocumentsURL().appendingPathComponent(fileName).path
+    print("DEBUG: ", result)
+    return result
 }
 
 func fileExistsAtPath(_ path: String) -> Bool {
