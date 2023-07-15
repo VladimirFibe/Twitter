@@ -94,6 +94,8 @@
 		27D9161D29FEC4850027C3BF /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9161C29FEC4850027C3BF /* CustomInputField.swift */; };
 		27D9161F29FEC4CB0027C3BF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9161E29FEC4CB0027C3BF /* SignInView.swift */; };
 		27D9162129FEC5070027C3BF /* SingInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9162029FEC5070027C3BF /* SingInViewModel.swift */; };
+		E8E466622A62F66F0050C47C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E466612A62F66F0050C47C /* HomeViewController.swift */; };
+		E8E466642A62F6E90050C47C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E466632A62F6E90050C47C /* MainTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +183,8 @@
 		27D9161C29FEC4850027C3BF /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		27D9161E29FEC4CB0027C3BF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		27D9162029FEC5070027C3BF /* SingInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewModel.swift; sourceTree = "<group>"; };
+		E8E466612A62F66F0050C47C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E8E466632A62F6E90050C47C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,11 +434,9 @@
 		27D915D729FEB4820027C3BF /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				27D915F829FEB5A20027C3BF /* App */,
-				273547FD2A01F6CD0087B3E3 /* Messager */,
-				27C19E4E29FF92FF00DD19A5 /* Model */,
-				27D915F929FEBA2D0027C3BF /* Core */,
-				27D9160B29FEBFDC0027C3BF /* Features */,
+				E8E4665E2A62F5420050C47C /* App */,
+				E8E4665F2A62F5DB0050C47C /* Feautres */,
+				E8E4665D2A62F52F0050C47C /* Old */,
 				27D915F729FEB5770027C3BF /* Supporting Files */,
 				270374DB2A00C20B00F27641 /* PersonManager.swift */,
 			);
@@ -455,8 +457,6 @@
 		27D915F829FEB5A20027C3BF /* App */ = {
 			isa = PBXGroup;
 			children = (
-				27D915D829FEB4820027C3BF /* AppDelegate.swift */,
-				27D915DA29FEB4820027C3BF /* SceneDelegate.swift */,
 				27D9160929FEBE1E0027C3BF /* AppCoordinator.swift */,
 			);
 			name = App;
@@ -552,6 +552,44 @@
 				27C19E4A29FF923F00DD19A5 /* UserStatsView.swift */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		E8E4665D2A62F52F0050C47C /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				27D915F829FEB5A20027C3BF /* App */,
+				273547FD2A01F6CD0087B3E3 /* Messager */,
+				27C19E4E29FF92FF00DD19A5 /* Model */,
+				27D915F929FEBA2D0027C3BF /* Core */,
+				27D9160B29FEBFDC0027C3BF /* Features */,
+			);
+			name = Old;
+			sourceTree = "<group>";
+		};
+		E8E4665E2A62F5420050C47C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				27D915D829FEB4820027C3BF /* AppDelegate.swift */,
+				27D915DA29FEB4820027C3BF /* SceneDelegate.swift */,
+				E8E466632A62F6E90050C47C /* MainTabBarViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E8E4665F2A62F5DB0050C47C /* Feautres */ = {
+			isa = PBXGroup;
+			children = (
+				E8E466602A62F6460050C47C /* Home */,
+			);
+			path = Feautres;
+			sourceTree = "<group>";
+		};
+		E8E466602A62F6460050C47C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E8E466612A62F66F0050C47C /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -663,6 +701,7 @@
 				27BF4FCF2A03E18D00237627 /* MProfileViewController.swift in Sources */,
 				27769F6E2A00947200EC4AF8 /* PersonRowView.swift in Sources */,
 				27C19E2B29FF1BD900DD19A5 /* SignUpView.swift in Sources */,
+				E8E466642A62F6E90050C47C /* MainTabBarViewController.swift in Sources */,
 				27D9160A29FEBE1E0027C3BF /* AppCoordinator.swift in Sources */,
 				27C19E5029FF930C00DD19A5 /* Person.swift in Sources */,
 				27BF4FDB2A03FB7100237627 /* Status.swift in Sources */,
@@ -691,6 +730,7 @@
 				27D9161D29FEC4850027C3BF /* CustomInputField.swift in Sources */,
 				27D9161329FEC1940027C3BF /* View+Extension.swift in Sources */,
 				27C19E2029FF18B700DD19A5 /* AuthHeaderView.swift in Sources */,
+				E8E466622A62F66F0050C47C /* HomeViewController.swift in Sources */,
 				27769F702A009D9A00EC4AF8 /* FeedStore.swift in Sources */,
 				27C19E2D29FF23C900DD19A5 /* SignUpStore.swift in Sources */,
 				27769F662A002DAB00EC4AF8 /* MessagesCoordinator.swift in Sources */,
