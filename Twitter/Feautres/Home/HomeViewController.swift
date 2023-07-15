@@ -18,7 +18,7 @@ extension HomeViewController {
     private func setupTimelineTableView() {
         view.addSubview(timelineTableView)
         timelineTableView.translatesAutoresizingMaskIntoConstraints = false
-        timelineTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        timelineTableView.register(TweetTableViewCell.self, forCellReuseIdentifier: TweetTableViewCell.identifier)
         timelineTableView.delegate = self
         timelineTableView.dataSource = self
         NSLayoutConstraint.activate([
@@ -42,11 +42,8 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.contentView.backgroundColor = .lightGray
-        cell.textLabel?.text = "tweet"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TweetTableViewCell.identifier, for: indexPath) as? TweetTableViewCell else { return UITableViewCell()
+        }
         return cell
     }
-    
-    
 }

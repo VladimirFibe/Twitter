@@ -96,6 +96,7 @@
 		27D9162129FEC5070027C3BF /* SingInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9162029FEC5070027C3BF /* SingInViewModel.swift */; };
 		E8E466622A62F66F0050C47C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E466612A62F66F0050C47C /* HomeViewController.swift */; };
 		E8E466642A62F6E90050C47C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E466632A62F6E90050C47C /* MainTabBarViewController.swift */; };
+		E8E466662A63041A0050C47C /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E466652A63041A0050C47C /* TweetTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -185,6 +186,7 @@
 		27D9162029FEC5070027C3BF /* SingInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewModel.swift; sourceTree = "<group>"; };
 		E8E466612A62F66F0050C47C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E8E466632A62F6E90050C47C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		E8E466652A63041A0050C47C /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -588,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				E8E466612A62F66F0050C47C /* HomeViewController.swift */,
+				E8E466652A63041A0050C47C /* TweetTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				27D9160A29FEBE1E0027C3BF /* AppCoordinator.swift in Sources */,
 				27C19E5029FF930C00DD19A5 /* Person.swift in Sources */,
 				27BF4FDB2A03FB7100237627 /* Status.swift in Sources */,
+				E8E466662A63041A0050C47C /* TweetTableViewCell.swift in Sources */,
 				27769F642A002DA000EC4AF8 /* MessagesViewController.swift in Sources */,
 				273548082A020BF30087B3E3 /* MAuthTextField.swift in Sources */,
 				27BF4FC82A03B8D000237627 /* MSettignsProfileCell.swift in Sources */,
